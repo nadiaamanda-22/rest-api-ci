@@ -11,9 +11,9 @@ class Mahasiswa extends CI_Controller
 
     public function index()
     {
-        $data['judul'] = 'Daftar Mahasiswa';
+        $data['judul'] = 'Daftar Anggota Guzzle';
         $data['mahasiswa'] = $this->Mahasiswa_model->getAllMahasiswa();
-        if( $this->input->post('keyword') ) {
+        if ($this->input->post('keyword')) {
             $data['mahasiswa'] = $this->Mahasiswa_model->cariDataMahasiswa();
         }
         $this->load->view('templates/header', $data);
@@ -23,11 +23,11 @@ class Mahasiswa extends CI_Controller
 
     public function tambah()
     {
-        $data['judul'] = 'Form Tambah Data Mahasiswa';
+        $data['judul'] = 'Form Tambah Data';
 
-        $this->form_validation->set_rules('nama', 'Nama', 'required');
-        $this->form_validation->set_rules('nrp', 'NRP', 'required|numeric');
-        $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+        $this->form_validation->set_rules('nama_anggota', 'nama anggota', 'required');
+        $this->form_validation->set_rules('no_anggota', 'no anggota', 'required|numeric');
+        $this->form_validation->set_rules('jabatan', 'jabatan', 'required');
 
         if ($this->form_validation->run() == false) {
             $this->load->view('templates/header', $data);
@@ -49,7 +49,7 @@ class Mahasiswa extends CI_Controller
 
     public function detail($id)
     {
-        $data['judul'] = 'Detail Data Mahasiswa';
+        $data['judul'] = 'Detail Data';
         $data['mahasiswa'] = $this->Mahasiswa_model->getMahasiswaById($id);
         $this->load->view('templates/header', $data);
         $this->load->view('mahasiswa/detail', $data);
@@ -58,13 +58,12 @@ class Mahasiswa extends CI_Controller
 
     public function ubah($id)
     {
-        $data['judul'] = 'Form Ubah Data Mahasiswa';
+        $data['judul'] = 'Form Ubah Data';
         $data['mahasiswa'] = $this->Mahasiswa_model->getMahasiswaById($id);
-        $data['jurusan'] = ['Teknik Informatika', 'Teknik Mesin', 'Teknik Planologi', 'Teknik Pangan', 'Teknik Lingkungan'];
 
-        $this->form_validation->set_rules('nama', 'Nama', 'required');
-        $this->form_validation->set_rules('nrp', 'NRP', 'required|numeric');
-        $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+        $this->form_validation->set_rules('nama_anggota', 'nama anggota', 'required');
+        $this->form_validation->set_rules('no_anggota', 'nomor anggota', 'required|numeric');
+        $this->form_validation->set_rules('jabatan', 'jabatan', 'required');
 
         if ($this->form_validation->run() == false) {
             $this->load->view('templates/header', $data);
@@ -76,5 +75,4 @@ class Mahasiswa extends CI_Controller
             redirect('mahasiswa');
         }
     }
-
 }

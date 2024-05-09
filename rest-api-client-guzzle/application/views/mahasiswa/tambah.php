@@ -10,30 +10,19 @@
                 <div class="card-body">
                     <form action="" method="post">
                         <div class="form-group">
-                            <label for="nama">Nama</label>
-                            <input type="text" name="nama" class="form-control" id="nama">
-                            <small class="form-text text-danger"><?= form_error('nama'); ?></small>
+                            <label for="nama_anggota">Nama Anggota</label>
+                            <input type="text" name="nama_anggota" class="form-control" id="nama_anggota">
+                            <small class="form-text text-danger"><?= form_error('nama_anggota'); ?></small>
                         </div>
                         <div class="form-group">
-                            <label for="nrp">NRP</label>
-                            <input type="text" name="nrp" class="form-control" id="nrp">
-                            <small class="form-text text-danger"><?= form_error('nrp'); ?></small>
+                            <label for="no_anggota">No Anggota</label>
+                            <input type="text" name="no_anggota" class="form-control" id="no_anggota" maxlength="5">
+                            <small class="form-text text-danger"><?= form_error('no_anggota'); ?></small>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="text" name="email" class="form-control" id="email">
-                            <small class="form-text text-danger"><?= form_error('email'); ?></small>
-                        </div>
-                        <div class="form-group">
-                            <label for="jurusan">Jurusan</label>
-                            <select class="form-control" id="jurusan" name="jurusan">
-                                <option value="Teknik Informatika">Teknik Informatika</option>
-                                <option value="Teknik Industri">Teknik Industri</option>
-                                <option value="Teknik Pangan">Teknik Pangan</option>
-                                <option value="Teknik Mesin">Teknik Mesin</option>
-                                <option value="Teknik Planologi">Teknik Planologi</option>
-                                <option value="Teknik Lingkungan">Teknik Lingkungan</option>
-                            </select>
+                            <label for="jabatan">Jabatan</label>
+                            <input type="text" name="jabatan" class="form-control" id="jabatan">
+                            <small class="form-text text-danger"><?= form_error('jabatan'); ?></small>
                         </div>
                         <button type="submit" name="tambah" class="btn btn-primary float-right">Tambah Data</button>
                     </form>

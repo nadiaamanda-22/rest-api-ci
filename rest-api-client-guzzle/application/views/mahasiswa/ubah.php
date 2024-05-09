@@ -11,31 +11,19 @@
                     <form action="" method="post">
                         <input type="hidden" name="id" value="<?= $mahasiswa['id']; ?>">
                         <div class="form-group">
-                            <label for="nama">Nama</label>
-                            <input type="text" name="nama" class="form-control" id="nama" value="<?= $mahasiswa['nama']; ?>">
-                            <small class="form-text text-danger"><?= form_error('nama'); ?></small>
+                            <label for="nama_anggota">Nama Anggota</label>
+                            <input type="text" name="nama_anggota" class="form-control" id="nama_anggota" value="<?= $mahasiswa['nama_anggota']; ?>">
+                            <small class="form-text text-danger"><?= form_error('nama_anggota'); ?></small>
                         </div>
                         <div class="form-group">
-                            <label for="nrp">NRP</label>
-                            <input type="text" name="nrp" class="form-control" id="nrp" value="<?= $mahasiswa['nrp']; ?>">
-                            <small class="form-text text-danger"><?= form_error('nrp'); ?></small>
+                            <label for="no_anggota">No Anggota</label>
+                            <input type="text" name="no_anggota" class="form-control" id="no_anggota" maxlength="5" value="<?= $mahasiswa['no_anggota']; ?>">
+                            <small class="form-text text-danger"><?= form_error('no_anggota'); ?></small>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="text" name="email" class="form-control" id="email" value="<?= $mahasiswa['email']; ?>">
-                            <small class="form-text text-danger"><?= form_error('email'); ?></small>
-                        </div>
-                        <div class="form-group">
-                            <label for="jurusan">Jurusan</label>
-                            <select class="form-control" id="jurusan" name="jurusan">
-                                <?php foreach( $jurusan as $j ) : ?>
-                                    <?php if( $j == $mahasiswa['jurusan'] ) : ?>
-                                        <option value="<?= $j; ?>" selected><?= $j; ?></option>
-                                    <?php else : ?>
-                                        <option value="<?= $j; ?>"><?= $j; ?></option>
-                                    <?php endif; ?>
-                                <?php endforeach; ?>
-                            </select>
+                            <label for="jabatan">Jabatan</label>
+                            <input type="text" name="jabatan" class="form-control" id="jabatan" value="<?= $mahasiswa['jabatan']; ?>">
+                            <small class="form-text text-danger"><?= form_error('jabatan'); ?></small>
                         </div>
                         <button type="submit" name="ubah" class="btn btn-primary float-right">Ubah Data</button>
                     </form>
