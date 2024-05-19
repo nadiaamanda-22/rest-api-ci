@@ -210,7 +210,7 @@ $config['auth_library_function'] = '';
 | Array of usernames and passwords for login, if ldap is configured this is ignored
 |
 */
-$config['rest_valid_logins'] = ['admin' => '54321'];
+$config['rest_valid_logins'] = ['admin' => 'admin'];
 
 /*
 |--------------------------------------------------------------------------
