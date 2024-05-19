@@ -107,4 +107,24 @@ class Mahasiswa extends RestController
             }
         }
     }
+
+    public function search_get()
+    {
+        $nama = $this->get('nama');
+        $getNama = $this->mhs_m->searchData($nama);
+
+        if ($nama != null) {
+            if ($getNama != null) {
+                $this->response([
+                    'status' => true,
+                    'data' => $getNama
+                ], RestController::HTTP_OK);
+            } else {
+                $this->response([
+                    'status' => false,
+                    'data' => $getNama
+                ], RestController::HTTP_NOT_FOUND);
+            }
+        }
+    }
 }
