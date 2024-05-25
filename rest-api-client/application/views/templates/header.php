@@ -26,9 +26,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link" href="<?= base_url(); ?>">Mahasiswa Curl
+          <a class="nav-item nav-link" href="<?= base_url('mahasiswacurl'); ?>">Mahasiswa Curl
             <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="<?= base_url(); ?>mahasiswaguzzle">Mahasiswa Guzzle</a>
+          <a class="nav-item nav-link" href="<?= base_url('mahasiswaguzzle'); ?>">Mahasiswa Guzzle</a>
           <a class="nav-item nav-link" href="#">About</a>
         </div>
       </div>
